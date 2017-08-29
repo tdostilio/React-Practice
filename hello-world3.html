@@ -28,22 +28,58 @@
     //     return (<div><span>142</span></div>);
     // }
 
+        // Version #5
+    // function Readout(props) {
+    //     return (
+    //         <div>
+    //             <span>
+    //             { props.temperature } { props.unit }
+    //             </span>
+    //         </div>
+    //     );
+    // }
 
-    function Readout(props) {
-        return (
-            <div>
-                <span>
-                { props.temperature } { props.unit }
-                </span>
-            </div>
-        );
-    }
+
+    // ReactDOM.render(
+    //  <Readout temperature="178" unit="F" />,
+    //   document.getElementById('root')
+    // );
+
+    // // Version #6
+    // const Readout = (props) => {
+    //     return (
+    //         <div>
+    //             <span>
+    //             { props.temperature } { props.unit }
+    //             </span>
+    //         </div>
+    //     );
+    // }
+
+    // // Version #7 - Refined, harder to debug because you cannot console.log
+    // const Readout = props => (
+    //         <div>
+    //             <span>
+    //             { props.temperature } { props.unit }
+    //             </span>
+    //         </div>
+    //     );
+
+    // Version #8 
+    const Readout = props => (
+        <div>
+            <span>
+            { props.temperature } { props.unit.toUpperCase() }
+            </span>
+        </div>
+    );
 
 
     ReactDOM.render(
-     <Readout temperature="178" unit="F" />,
+     <Readout temperature="178" unit="f" />,
       document.getElementById('root')
     );
+
   </script>
 </body>
 </html>
