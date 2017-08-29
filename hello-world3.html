@@ -23,13 +23,25 @@
     //   )
     // );
 
+    // Version #3
+    // function Component() {
+    //     return (<div><span>142</span></div>);
+    // }
 
-    function Component() {
-        return (<div><span>142</span></div>);
+
+    function Readout(props) {
+        return (
+            <div>
+                <span>
+                { props.temperature } { props.unit }
+                </span>
+            </div>
+        );
     }
 
+
     ReactDOM.render(
-     <Component />,
+     <Readout temperature="178" unit="F" />,
       document.getElementById('root')
     );
   </script>
